@@ -31,3 +31,31 @@ Migrating to CreateRooms (20220528084846)
   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-05-28 10:04:01 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  Rendered rooms/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 215)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/chrispayne/Projects/personal/fonix-web-chat/public/packs
+[Webpacker] Hash: 50e3bf4ccc35a838f1be
+Version: webpack 4.46.0
+Time: 673ms
+Built at: 05/28/2022 10:04:03 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-7d583ba8e3595cd67db2.js    125 KiB  application  [emitted] [immutable]  application
+js/application-7d583ba8e3595cd67db2.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-7d583ba8e3595cd67db2.js js/application-7d583ba8e3595cd67db2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 2112.7ms | Allocations: 17864)
+Completed 200 OK in 2119ms (Views: 2115.1ms | ActiveRecord: 0.0ms | Allocations: 20461)
+
+
