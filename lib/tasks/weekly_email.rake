@@ -4,13 +4,16 @@ namespace :weekly_email do
   desc "Send email to each user with information regarding messages"
   task send: :environment do
     week_total_messages = Message.where("created_at >= ?", 1.week.ago).count
-    received_since_user_last_messages = 0
 
     User.all.each do |user|
       last_message_from_user = user.messages.last
       received_since_user_last_messages = Message.where("created_at > ?", last_message_from_user.created_at).count
 
-      puts "User: #{user.email} - #{week_total_messages} messages have been exchanged in the last week - #{received_since_user_last_messages} since your last message on the #{last_message_from_user.created_at.strftime("#{last_message_from_user.created_at.day.ordinalize} of %B")}"
+      date = last_message_from_user.created_at.strftime("#{last_message_from_user.created_at.day.ordinalize} of %B")
+
+      puts "User: #{user.email} - #{week_total_messages} messages have been exchanged in the last week - #{received_since_user_last_messages} since your last message on the #{date}"
+
+      UserMailer.weekly_message_info(email: user.email, week_total_messages: week_total_messages, received_since_user_last_messages: received_since_user_last_messages, date: date).deliver
     end
 
     puts "Done"
