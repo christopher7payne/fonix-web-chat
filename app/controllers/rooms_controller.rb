@@ -1,5 +1,7 @@
 class RoomsController < ApplicationController
-  before_action :page_layout
+  before_action :authenticate_user!
+  before_action :page_setup
+
   def index
     @rooms = Room.open_rooms
   end
@@ -7,12 +9,13 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find_by(id: safe_params[:room_id])
     redirect_to all_rooms_path, alert: 'Unable to find room' unless @room
+    @message = Message.new
   end
 
   private
 
   # Override the set page layout in the application.html
-  def page_layout
+  def page_setup
     @page_width = 500
   end
 

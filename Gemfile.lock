@@ -114,6 +114,8 @@ GEM
     nokogiri (1.13.6)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
+    nokogiri (1.13.6-arm64-darwin)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     public_suffix (4.0.7)
     puma (4.3.12)
@@ -186,8 +188,14 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    stimulus-rails (1.0.4)
+      railties (>= 6.0.0)
     thor (1.2.1)
     tilt (2.0.10)
+    turbo-rails (1.1.1)
+      actionpack (>= 6.0.0)
+      activejob (>= 6.0.0)
+      railties (>= 6.0.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -234,6 +242,8 @@ DEPENDENCIES
   selenium-webdriver
   spring
   sqlite3 (~> 1.4)
+  stimulus-rails (~> 1.0)
+  turbo-rails (~> 1.1)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
