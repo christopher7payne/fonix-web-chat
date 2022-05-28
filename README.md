@@ -31,3 +31,5 @@ I.e.:
 ---
 
 Homepage: http://127.0.0.1:3000
+
+Rake task: rake weekly_email:send

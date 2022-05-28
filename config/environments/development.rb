@@ -79,4 +79,7 @@ Rails.application.configure do
   ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
     html_tag.html_safe
   end
+
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perform_deliveries = true
 end
