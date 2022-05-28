@@ -27,3 +27,7 @@ messages received since the user has sent his last message.
 I.e.:
 600 messages have been exchanged in the last week.
 750 since your last message on the 1st of February.
+
+---
+
+Homepage: http://127.0.0.1:3000
