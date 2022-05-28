@@ -1,6 +1,6 @@
 # fonix-web-chat
 
-- Technical Interview Challenge
+Technical Interview Challenge
 
 -- Introduction
 
@@ -32,4 +32,8 @@ I.e.:
 
 Homepage: http://127.0.0.1:3000
 
-Rake task: rake weekly_email:send
+Rake task: rake weekly_email:send 
+
+I did also create 2 other rake task to help with development:
+rake weekly_email:populate
+rake weekly_email:delete_all
