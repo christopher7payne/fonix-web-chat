@@ -1,18 +1,23 @@
-<% if !notice.blank? %>
-  <div class="alert alert-success alert-dismissible" role="alert">
-    <% if flash[:html_safe] %>
-      <%= notice.html_safe %>
-    <% else %>
-      <%= notice %>
-    <% end %>
-  </div>
-<% elsif alert.present? %>
-  <div class="alert alert-danger alert-dismissible" role="alert">
-    <% if flash[:html_safe] %>
-      <%= alert.html_safe %>
-    <% else %>
-      <%= alert %>
-    <% end %>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<% if !notice.blank? || alert.present? %>
+  <div class="pt-3">
+  <% if !notice.blank? %>
+    <div class="alert alert-success alert-dismissible" role="alert">
+      <% if flash[:html_safe] %>
+        <%= notice.html_safe %>
+      <% else %>
+        <%= notice %>
+      <% end %>
+    </div>
+  <% elsif alert.present? %>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <% if flash[:html_safe] %>
+        <%= alert.html_safe %>
+      <% else %>
+        <%= alert %>
+      <% end %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <% end %>
   </div>
 <% end %>
+
