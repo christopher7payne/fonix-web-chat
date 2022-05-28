@@ -1,0 +1,20 @@
+<% if !notice.blank? %>
+  <div class="alert alert-success" role="alert">
+    <% if flash[:html_safe] %>
+      <%= notice.html_safe %>
+    <% else %>
+      <%= notice %>
+    <% end %>
+  </div>
+<% elsif alert.present? %>
+  <div class="alert alert-danger" role="alert">
+    <% if flash[:html_safe] %>
+      <%= alert.html_safe %>
+    <% else %>
+      <%= alert %>
+    <% end %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<% end %>
