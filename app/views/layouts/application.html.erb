@@ -16,7 +16,7 @@
   <body>
   <div class="container-fluid" style="background-image: linear-gradient(to right, #0b295f, #6298b8);background-size: cover;">
     <%= render 'layouts/alerts' %>
-    <main class="text-center w-100 m-auto py-5" style="max-width: 350px">
+    <main class="text-center w-100 m-auto py-5" style="max-width: <%= @page_width || 350 %>px">
       <%= yield %>
     </main>
   </div>
