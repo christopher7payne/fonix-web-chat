@@ -4,7 +4,7 @@
 
 <%= turbo_stream_from @room %>
 <div id="messages">
-  <% @room.messages.each do |message| %>
+  <% @room.messages.order(:created_at).each do |message| %>
     <%= render message %>
   <% end %>
 </div>
