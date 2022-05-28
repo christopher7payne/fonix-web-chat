@@ -1,14 +1,14 @@
-<main class="text-center w-100 m-auto py-5" style="max-width: 350px">
+
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <%= image_tag 'fonix-logo.svg', class: 'mb-4', width: '300', height: '135' %>
 
     <div class="form-floating mb-2">
-      <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'name@example.com', autocomplete: 'off', id: 'floatingInput' %>
+      <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'name@example.com', autocomplete: 'off' %>
       <%= f.label :email, class: 'text-dark' %>
     </div>
 
     <div class="form-floating">
-      <%= f.email_field :password, class: 'form-control', placeholder: 'name@example.com', autocomplete: 'current-password', id: 'floatingInput' %>
+      <%= f.email_field :password, type: 'password', class: 'form-control', autocomplete: 'current-password' %>
       <%= f.label :password, class: 'text-dark' %>
     </div>
 
@@ -19,7 +19,7 @@
       </div>
     <% end %>
 
-    <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">Sign in</button>
+    <%= f.submit "Sign up", class: 'w-100 btn btn-lg btn-primary mb-3' %>
 
     <%= render "devise/shared/links" %>
   <% end %>

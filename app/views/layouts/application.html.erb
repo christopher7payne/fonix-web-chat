@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>FonixWebChat</title>
+    <title>Fonix Web Chat</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -16,7 +16,9 @@
   <body>
   <div class="container-fluid" style="background-image: linear-gradient(to right, #0b295f, #6298b8);background-size: cover;">
     <%= render 'layouts/alerts' %>
-    <%= yield %>
+    <main class="text-center w-100 m-auto py-5" style="max-width: 350px">
+      <%= yield %>
+    </main>
   </div>
   </body>
 </html>
