@@ -5,4 +5,4 @@
 import { application } from "./application"
 
 import ResetFormController from "./reset_form_controller"
-application.register("hello", ResetFormController)
+application.register("reset_form", ResetFormController)

@@ -7,13 +7,13 @@ namespace :weekly_email do
 
     User.all.each do |user|
       last_message_from_user = user.messages.last
-      received_since_user_last_messages = Message.where("created_at > ?", last_message_from_user.created_at).count
+      latest_messages = Message.where("created_at > ?", last_message_from_user.created_at).count
 
       date = last_message_from_user.created_at.strftime("#{last_message_from_user.created_at.day.ordinalize} of %B")
 
-      puts "User: #{user.email} - #{week_total_messages} messages have been exchanged in the last week - #{received_since_user_last_messages} since your last message on the #{date}"
+      puts "User: #{user.email} - #{week_total_messages} messages have been exchanged in the last week - #{latest_messages} since your last message on the #{date}"
 
-      UserMailer.weekly_message_info(email: user.email, week_total_messages: week_total_messages, received_since_user_last_messages: received_since_user_last_messages, date: date).deliver
+      UserMailer.weekly_message_info(email: user.email, week_total_messages: week_total_messages, latest_messages: latest_messages, date: date).deliver
     end
 
     puts "Done"
