@@ -1,0 +1,16 @@
+{
+  "application.js": "/packs-test/js/application-85d3e7b07d720797b5b3.js",
+  "application.js.map": "/packs-test/js/application-85d3e7b07d720797b5b3.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs-test/js/application-85d3e7b07d720797b5b3.js"
+      ],
+      "js.map": [
+        "/packs-test/js/application-85d3e7b07d720797b5b3.js.map"
+      ]
+    }
+  },
+  "vendors~actioncable.js": "/packs-test/js/vendors~actioncable-da29327af28fa9caa1ec.chunk.js",
+  "vendors~actioncable.js.map": "/packs-test/js/vendors~actioncable-da29327af28fa9caa1ec.chunk.js.map"
+}
