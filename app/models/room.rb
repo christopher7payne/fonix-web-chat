@@ -1,4 +1,5 @@
 class Room < ApplicationRecord
+  validates_presence_of :name, message: "can't be blank"
   validates_uniqueness_of :name
   has_many :messages
 
