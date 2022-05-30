@@ -32,8 +32,17 @@ I.e.:
 
 Homepage: http://127.0.0.1:3000
 
-Rake task: rake weekly_email:send 
+For the user authencication side I've used Devise.
 
-I did also create 2 other rake task to help with development:
-rake weekly_email:populate
-rake weekly_email:delete_all
+Ive built a rake taks to generate the taks to send each user an email with the imformation of how many messages have been sent in the past week and how many messages have been sent since their last message sent. I have added the letter_opener_web gem to capture local emails and has a nice GUI with it to check messages. 
+
+Rake task: rake weekly_email:send
+
+I did also create 2 other rake task to help with development (i would delete these in a live production env!):
+- rake weekly_email:populate
+- rake weekly_email:delete_all
+
+-- Ideas and improvments
+Fix the issue with the message field keeping the message in it after being sent
+See if a Gem such as kaminari could partition the messages when they get to a long list
+More Rspec test more specificly System test to test the user interface
