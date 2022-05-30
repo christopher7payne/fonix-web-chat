@@ -2,6 +2,8 @@
 <h1>Welcome to Rooms!</h1>
 <p>Please find below all the enabled rooms</p>
 
+<ul>
 <% @rooms.each do |room| %>
-  <%= link_to room.name, single_room_path(room.id) %>
+    <li><%= link_to room.name, single_room_path(room.id) %></li>
 <% end %>
+</ul>
